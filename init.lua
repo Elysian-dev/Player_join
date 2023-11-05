@@ -9,6 +9,8 @@ function minetest.send_join_message(player_name)
 	end
 end
 
+-- Left Message
+
 function minetest.send_leave_message(player_name, timed_out)
 	local announcement = minetest.colorize(left_color_msg, left_prefix_msg).. minetest.colorize(left_color_player_name,  player_name).. minetest.colorize(left_color_msg, left_message)
 		if timed_out then
@@ -16,14 +18,4 @@ function minetest.send_leave_message(player_name, timed_out)
 		end
 	minetest.chat_send_all(announcement)
 end
-
--- minetest.register_on_joinplayer(function(player)
--- 	local player_name = player:get_player_name()
--- 	minetest.send_join_message(player_name)
--- end)
-
--- minetest.register_on_leaveplayer(function(player, timed_out)
--- 	local player_name = player:get_player_name()
--- 	minetest.send_leave_message(player_name, timed_out)
--- end)
 
