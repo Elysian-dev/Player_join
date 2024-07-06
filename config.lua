@@ -20,6 +20,10 @@ left_color_player_name = "#00d8ea"
 
 ------------------ Staff Join/left message ------------------
 
+---- Optional configuration, only with staffranks mod
+
+ranks_staff = {"admin", "modo", "dev", "build"}
+
 -- Message when the player joins the server
 
 st_join_prefix_msg = "[Staff] The staff member "
