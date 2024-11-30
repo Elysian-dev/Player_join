@@ -40,6 +40,9 @@ function minetest.send_leave_message(player_name, timed_out)
 			if has_a_staff_rank(player_name) then
 				announcement = minetest.colorize(st_left_color_msg, st_left_prefix_msg) ..
 				minetest.colorize(st_left_color_player_name, player_name) .. minetest.colorize(st_left_color_msg, st_left_message)
+			else
+				announcement = minetest.colorize(left_color_msg, left_prefix_msg) ..
+				minetest.colorize(left_color_player_name, player_name) .. minetest.colorize(left_color_msg, left_message)
 			end
 		end
 	else
